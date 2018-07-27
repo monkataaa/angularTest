@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Route} from '@angular/router'
+import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
+import {AppRoutingModule} from './app.routing'
 
 @NgModule({
   declarations: [
@@ -16,12 +17,10 @@ import { RegisterComponent } from './authentication/register/register.component'
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      // {path : '', component : HomeComponent},
-      {path : 'login', component : LoginComponent},
-      {path : 'register', component : RegisterComponent}
-    ])
+    FormsModule,
+    AppRoutingModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
