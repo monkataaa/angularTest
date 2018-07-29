@@ -57,4 +57,7 @@
 
     <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Register</button>
   </form>
+  <div *ngIf="registerFailed" class="aleer alert-danger">
+      {{errMessage}}
+  </div>
 </div>
