@@ -52,7 +52,8 @@ export class AuthService {
             return new HttpHeaders({
                 'Authorization' : `Kinvey ${localStorage.getItem('authtoken')}`,
                 'Content-Type' : 'application/json'
-        }
+        })
+      }
     }
 }
 
